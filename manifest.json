@@ -1,0 +1,28 @@
+{
+    "name": "Currency conversion",
+    "description": "The conversion rate represents the relative value between two currencies. It is essentially the price measure of one currency against another.",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "browser_action": {
+        "default_title": "Fast currency conversion.",
+        "default_icon": "./icon16.png",
+        "default_popup": "./index.html"
+    },
+    "host_permissions": [
+        "http://www.blogger.com/",
+        "*://*/*"
+      ],
+    "permissions": [
+        "activeTab"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "icons": { 
+        "16": "icon16.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png" 
+    }
+  }
