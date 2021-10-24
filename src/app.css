@@ -1,13 +1,12 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 body {
     margin: 0px;
     padding: 0px;
-    
-    background: rgb(255,255,255);
-background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(227,227,255,1) 35%, rgba(195,245,255,1) 100%);
-font-family: 'Patrick Hand', cursive;
+    padding-bottom: 20px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(227, 227, 255, 1) 35%, rgba(195, 245, 255, 1) 100%);
+    font-family: 'Patrick Hand', cursive !important;
     /* background: rgb(12, 200, 100);
     background: linear-gradient(90deg, rgba(12, 200, 100, 0.616) 0%, rgba(11, 149, 203, 0.616) 35%, rgba(253, 186, 255, 0.541) 100%); */
 }
@@ -16,6 +15,11 @@ font-family: 'Patrick Hand', cursive;
     width: 50px;
     text-align: center;
 
+}
+
+.container_custom{
+    width: 600px !important;
+    max-width: 100%;
 }
 
 .logo {
@@ -29,30 +33,30 @@ font-family: 'Patrick Hand', cursive;
     margin-bottom: 20px;
 }
 
-.logo_title > h3{
-margin: 0px;
-font-size: 25px;
-color: darkblue;
-font-weight: 600;
+.logo_title>h3 {
+    margin: 0px;
+    font-size: 25px;
+    color: darkblue;
+    font-weight: 600;
 }
 
-.logo_title > p{
+.logo_title>p {
     font-size: 18px;
     color: rgba(0, 0, 139, 0.568);
 }
 
-.logo_title a{
+.logo_title a {
     text-decoration: none;
     color: darkblue;
 }
 
-.logo > *{
+.logo>* {
     margin: 0px 10px;
     padding: 0px;
     text-align: left;
 }
 
-.created_by{
+.created_by {
     padding: 0px;
     margin: 0;
 }
@@ -76,6 +80,8 @@ font-weight: 600;
     align-items: center;
 }
 
+
+
 .box_currency>div {
     width: 100%;
     flex: 1;
@@ -89,7 +95,7 @@ font-weight: 600;
 .button_swap>button {
     background: white;
     color: rgb(63, 94, 251);
-    
+
     height: 50px;
     width: 50px;
     font-weight: 600;
@@ -100,28 +106,41 @@ font-weight: 600;
     transition: 0.8s;
     box-shadow: 0px 0px 10px rgb(3, 17, 88);
 }
-.button_swap>button:hover{
+
+.button_swap>button:hover {
     box-shadow: 0px 0px 10px rgb(63, 94, 251);
     background: rgb(63, 94, 251);
     background: radial-gradient(circle, rgb(3, 17, 88) 0%, rgb(2, 86, 97) 100%);
     color: white;
 }
 
-.curreency_dropdown_list{
+.curreency_dropdown_list {
     width: 100%;
     height: 40px;
     border: 0.2px;
-    box-shadow: 0px 0px 2px darkolivegreen;
+    box-shadow: 0px 2px 0px darkblue;
     outline: none;
     font-size: 17px;
-    text-align: left;
     border-right: none;
+    /* text-align: center; */
+    border-radius: 0;
 }
-.curreency_dropdown_list option:hover{
+
+.curreency_dropdown_list option:hover {
     background-color: thistle;
     background: thistle;
     font-size: 18px;
 }
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(238, 126, 178);
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
 
 .curreency_dropdown_list::-webkit-scrollbar-thumb {
     background: rgb(238, 126, 178);
@@ -130,24 +149,35 @@ font-weight: 600;
 .curreency_dropdown_list::-webkit-scrollbar {
     width: 6px;
     background-color: #F5F5F5;
-} 
+}
 
-.amount_input{
+.amount_input {
     width: 100%;
     height: 38px;
     border: 0.2px;
-    box-shadow: 0px 0px 2px darkolivegreen;
+    box-shadow: 0px 2px 0px darkblue;
     outline: none;
     font-size: 25px;
     text-align: center;
     border-left: none;
-    font-family: monospace;
+    font-family: monospace !important;
     font-weight: 700;
+    background: none;
+    border-radius: 0;
 }
-.so_icon{
+
+.amount_input:placeholder{
+    color: darkblue;
+}
+
+.so_icon {
     text-align: center;
 }
-.so_icon_ul{
+.so_icon h2{
+    font-size: 18px;
+}
+
+.so_icon_ul {
     list-style: none;
     display: flex;
     align-items: center;
@@ -156,10 +186,16 @@ font-weight: 600;
     margin: 0 auto;
     padding: 0;
 }
-.so_icon_ul a{
+
+.so_icon_ul .do{
+    margin: 3px auto;
+}
+
+.so_icon_ul a {
     text-decoration: none;
 }
-.so_icon_ul .icon_box{
+
+.so_icon_ul .icon_box {
     margin: 0 10px;
     width: 35px;
     height: 35px;
@@ -173,32 +209,335 @@ font-weight: 600;
     font-size: 16px;
     transition: 0.4s;
 }
-.so_icon_ul .icon_box:hover{
+
+.so_icon_ul .icon_box:hover {
     box-shadow: 0px 0px 5px darkorange;
 }
 
-.so_icon_ul .icon_box.fb{
-    background: rgb(46,116,233);
-    background: linear-gradient(21deg, rgba(46,116,233,1) 0%, rgba(36,84,210,1) 35%, rgba(65,147,244,1) 100%);
+.so_icon_ul .icon_box.fb {
+    background: rgb(46, 116, 233);
+    background: linear-gradient(21deg, rgba(46, 116, 233, 1) 0%, rgba(36, 84, 210, 1) 35%, rgba(65, 147, 244, 1) 100%);
 }
 
 
-.so_icon_ul .icon_box.ing{
-    background: rgb(209,0,57);
-background: linear-gradient(21deg, rgba(209,0,57,1) 0%, rgba(204,2,87,1) 35%, rgba(244,65,213,0.896796218487395) 100%);
+.so_icon_ul .icon_box.ing {
+    background: rgb(209, 0, 57);
+    background: linear-gradient(21deg, rgba(209, 0, 57, 1) 0%, rgba(204, 2, 87, 1) 35%, rgba(244, 65, 213, 0.896796218487395) 100%);
 }
 
-.so_icon_ul .icon_box.dne{
-    background: rgb(209,189,0);
-background: linear-gradient(90deg, rgba(209,189,0,1) 0%, rgba(204,110,2,1) 35%, rgba(244,143,65,0.896796218487395) 100%);
+.so_icon_ul .icon_box.dne {
+    background: rgb(209, 189, 0);
+    background: linear-gradient(90deg, rgba(209, 189, 0, 1) 0%, rgba(204, 110, 2, 1) 35%, rgba(244, 143, 65, 0.896796218487395) 100%);
 }
 
-.so_icon_ul .icon_box.fb:hover{
-    box-shadow: 0px 0px 10px rgb(46,116,233);
+.so_icon_ul .icon_box.fb:hover {
+    box-shadow: 0px 0px 10px rgb(46, 116, 233);
 }
-.so_icon_ul .icon_box.ing:hover{
-    box-shadow: 0px 0px 10px rgb(209,0,57);
+
+.so_icon_ul .icon_box.ing:hover {
+    box-shadow: 0px 0px 10px rgb(209, 0, 57);
 }
-.so_icon_ul .icon_box.dne:hover{
-    box-shadow: 0px 0px 10px rgb(209,189,0);
+
+.so_icon_ul .icon_box.dne:hover {
+    box-shadow: 0px 0px 10px rgb(209, 189, 0);
 }
+
+
+
+/* Style the tab */
+.tab {
+    
+    /* border: 1px solid white; */
+    /* background-color: white; */
+}
+
+/* Style the buttons inside the tab */
+.tablinks {
+    outline: none;
+    cursor: pointer;
+    padding: 0px 1px;
+    font-size: 17px;
+    height: 45px;
+    width: 120px;
+    margin: 0 0px;
+    transition: 0.7s;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    font-family: 'Patrick Hand', cursive !important;
+    font-weight: bold;
+    border-radius: 7px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Change background color of buttons on hover */
+.tablinks:hover {
+    background: rgb(34,193,195);
+    background: linear-gradient(83deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    color: rgb(114, 8, 8);
+    border-radius: 0 !important;
+}
+
+/* Create an active/current tablink class */
+.tablinks.active {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(227, 227, 255, 1) 35%, rgba(195, 245, 255, 1) 100%);
+    color: rgb(122, 122, 122);
+}
+
+/* Style the tab content */
+.tabcontent {
+    /* display: none; */
+    padding: 6px 12px;
+    /* border: 1px solid white; */
+    border-top: none;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    /* background-color: white; */
+}
+
+.box_currency.box_currency2 {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.tab.tabcontent.hdbvb{
+    width: 100%;
+}
+
+.btn-group.bootstrap-select.datalist.curreency_dropdown_list.curreency_dropdown_list2 {
+    width: 100%;
+}
+
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.button_swap2{
+    margin: 5px -50px !important;
+}
+
+.amount_input2{
+    border: none;
+    width: 100%;
+    border-bottom: 2px solid black;
+    outline: none;
+    background: none;
+    padding: 6px 0;
+    font-size: 25px;
+    border-radius: 0;
+    font-weight: 700;
+    text-align: center;
+    font-family: monospace !important;
+}
+
+.amount_input2:hover{
+    border-bottom: 2px solid rgb(151, 21, 21);
+}
+
+.datalist{
+    padding: 5px;
+}
+
+
+/* tab */
+.out_tab{
+    background: rgb(34,193,195);
+    background: linear-gradient(83deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    color: rgb(114, 8, 8);
+    border-radius: 7px;
+    padding: 3px;
+}
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    /* height: 300px;
+    width: 500px; */
+    /* background-color: white; */
+    /* border: 2px solid rgba(34,193,195,1); */
+    border-radius: 7px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(227, 227, 255, 1) 35%, rgba(195, 245, 255, 1) 100%);
+}
+
+.tabs label {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1rem 2rem; */
+    /* margin-right: 0.2rem; */
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.192);
+    font-weight: bold;
+    transition: background ease 0.3s;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    border-radius: 0;
+}
+
+.tabs .tab {
+    order: 9;
+    display: none;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs input[type="radio"]:checked+label {
+    background: rgb(34,193,195);
+background: linear-gradient(83deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+color: rgb(114, 8, 8);
+
+}
+
+.tabs input[type="radio"]:checked+label{
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.tabs input[type="radio"]:checked+label+.tab {
+    display: block;
+}
+
+.dropdown-menu.open{
+    width: 100%;
+    z-index: 999999999;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+}
+ul.dropdown-menu a{
+    padding: 8px 10px !important;
+}
+
+ul.dropdown-menu *{
+    font-family: monospace !important;
+}
+
+ul.dropdown-menu.inner::-webkit-scrollbar-thumb {
+    background: none;
+}
+
+ul.dropdown-menu.inner::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+button.btn.dropdown-toggle.btn-default {
+    background: none;
+    border: none;
+    font-size: 18px;
+    text-align: left;
+    padding: 0;
+    outline: none !important;
+    box-shadow: none;
+    font-family: 'Patrick Hand', cursive !important;
+}
+
+.donate_item{
+    display: flex;
+    background: rgb(34,193,195);
+    background: linear-gradient(83deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    color: rgb(114, 8, 8);
+    border-radius: 5px;
+    margin: 0 7px;
+    padding: 2px;
+}
+
+.donate_item input{
+    cursor: pointer;
+    border: none !important;
+    padding: 0;
+    margin: 0 !important;
+}
+
+.donate_item{
+    position: relative;
+}
+
+.donate_item > div{
+    background: white;
+    width: 100%;
+    padding: 5px 10px ;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.donate_item input{
+    margin: 0px 10px;
+    outline: none;
+    border: 1px solid rgb(169, 169, 172);
+    background: none;
+    /* padding: 5px 7px; */
+    font-size: 17px;
+    font-family: monospace !important;
+    width: 100%;
+}
+
+.donate_item .mess_coin_copy{
+    transition: 0.7s;
+    position: absolute;
+    bottom: -30px;
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+    z-index: 99999 !important;
+    text-align: center;
+    padding: 0 4px;
+    width: 100px;
+}
+.donate_item .mess_coin_copy::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -5px;
+    background: white;
+    transform: rotate(43deg) ;
+    /* z-index: 9; */
+}
+
+.mess_coin_copy{
+    display: none;  
+}
+
+
+ul.so_icon_ul_donate {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+ul.so_icon_ul_donate > li {
+    width: 50%;
+    float: left;
+    margin: 6px 0;
+}
+

@@ -28,7 +28,7 @@ function calculate() {
             .then(response => response.json())
             .then(data => {
                 if (data.conversion_result) {
-                    console.log(data)
+                    // console.log(data)
                     const price = x = data.conversion_result.toLocaleString('it-IT', {
                         style: 'currency',
                         currency: data.target_code
